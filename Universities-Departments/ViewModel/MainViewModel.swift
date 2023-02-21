@@ -30,21 +30,6 @@ struct ProvinceListViewModel {
         }
     }
 }
-struct TableViewCellViewModel {
-    func cellForRowAt(arr : [[University]], indexPath : IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let sectionData = arr[indexPath.section]
-        let university = sectionData[safe: indexPath.row]
-        cell.textLabel?.text = university?.name
-        return cell
-    }
-    func numberOfRowsInSection(arr : [[University]], section : Int) -> Int {
-        if let sectionData = arr[safe: section] {
-            return sectionData.count
-        }else {
-            return 0
-        }
-    }
-}
+
 
 
