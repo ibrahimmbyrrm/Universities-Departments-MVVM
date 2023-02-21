@@ -1,0 +1,3 @@
+# Universities-Departments-MVVM
+
+This is an app which shows all universities in all provinces in Turkey.If you want to see details about one of these universities, you can click and see a lot of information about it.I created this app according to MVVM Design pattern.Firstly, i created API Call function in API Manager file.This function returns 2 arrays: Provinces Array and [[Universities]] array.Province array provides section headers, university array provides cell names.Also, i used viewModel functions to set arrays in View File.This process works async.So, i used safe section extension to prevent fatal errors.Lastly, i used DetailViewModel to transfer selected university to other ViewControler.Thanks to updateLabels function, i changed labels's texts from ViewModel.
