@@ -8,12 +8,12 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    static var selectedUni : University?
+    var selectedUni : University?
     @IBOutlet weak var testLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        testLabel.text = selectedUni?.adress
     }
 
 }

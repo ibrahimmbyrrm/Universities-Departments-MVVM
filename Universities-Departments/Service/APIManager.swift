@@ -14,7 +14,11 @@ public class APIService {
         guard let resourceURL = URL(string: urlString) else {return}
         URLSession.shared.dataTask(with: resourceURL) { (data, response, error) in
             guard let data = data else {return}
-            guard error == nil else {return}
+            guard error == nil else {
+                print("error occurs")
+                return
+                
+            }
                 let jsonData = try? JSONDecoder().decode([Province].self, from: data)
                 guard let jsonData = jsonData else {return}
                 completion(jsonData)
@@ -22,3 +26,4 @@ public class APIService {
         }.resume()
     }
 }
+
